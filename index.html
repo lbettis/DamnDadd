@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Damn Dadd — The Bettis Family</title>
-  <meta name="description" content="Damn Dadd is the Bettis Family: faith, family and adventures on YouTube. Save as a family with God First, Money Wise, and test your Black cinema knowledge with Black Movies Trivia.">
+  <meta name="description" content="Damn Dadd is the Bettis Family: faith, family and adventures on YouTube. Save as a family with God First, Money Wise, designed and built by Ari at age 7, and test your Black cinema knowledge with Black Movies Trivia.">
   <link rel="canonical" href="https://damndadd.com/">
   <meta name="theme-color" content="#2a1d1b">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Damn Dadd">
   <meta property="og:title" content="Damn Dadd — The Bettis Family">
-  <meta property="og:description" content="Faith, family and a whole lot of adventures. Save together with God First, Money Wise and play Black Movies Trivia.">
+  <meta property="og:description" content="Faith, family and a whole lot of adventures. Save together with God First, Money Wise, built by Ari at age 7, and play Black Movies Trivia.">
   <meta property="og:url" content="https://damndadd.com/">
   <meta property="og:image" content="https://app.damndadd.com/logo.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -158,6 +158,28 @@
     .fake-input { height: 42px; border-radius: 10px; background: var(--cream-2); margin-bottom: 10px; }
     .fake-btn { height: 44px; border-radius: 12px; background: #9b4552; color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 15px; margin-top: 6px; }
     .app-card .tag { margin-top: 16px; font-size: 13px; color: var(--ink-soft); font-style: italic; font-family: var(--f-display); }
+    .kid-badge {
+      position: absolute; top: -15px; left: 50%; transform: translateX(-50%) rotate(-2deg);
+      background: var(--gold-soft); color: var(--ink); font-size: 13px; font-weight: 700;
+      padding: 7px 14px; border-radius: 999px; white-space: nowrap;
+      box-shadow: 0 10px 20px -10px rgba(42, 29, 27, .5);
+    }
+
+    /* Ari spotlight */
+    .founder {
+      display: grid; grid-template-columns: 76px 1fr; gap: 18px; align-items: center;
+      margin-top: 30px; padding: 20px 22px; border-radius: 20px;
+      background: linear-gradient(135deg, #fff6e6, #fdeee6); border: 1px solid rgba(217, 164, 65, .45);
+    }
+    .founder .age {
+      width: 76px; height: 76px; border-radius: 50%; background: var(--red); color: var(--gold-soft);
+      display: grid; place-items: center; text-align: center; line-height: 1;
+      font-family: var(--f-display); font-size: 40px; box-shadow: 0 0 0 6px rgba(179, 38, 30, .12);
+    }
+    .founder .age small { display: block; font-family: var(--f-body); font-size: 9px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-top: -2px; }
+    .founder .k { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+    .founder h3 { font-size: 26px; margin: 4px 0 6px; }
+    .founder p { color: var(--ink-soft); font-size: 16px; }
 
     .trivia-chip {
       position: absolute; left: 0; bottom: 0; width: min(88%, 320px);
@@ -423,6 +445,7 @@
 
         <div class="hero-stack" aria-label="Our apps">
           <a class="app-card" data-app href="https://app.damndadd.com/" aria-label="Open God First, Money Wise">
+            <span class="kid-badge">Designed &amp; built by Ari, age 7</span>
             <img src="https://app.damndadd.com/logo.png" alt="God First, Money Wise logo" width="170" height="170">
             <p class="sub">Savings for the whole family</p>
             <div class="fake-input"></div>
@@ -442,7 +465,7 @@
 
     <div class="strip">
       <div class="wrap strip-inner">
-        <span>New: build your family's savings habit with <strong>God First, Money Wise</strong>.</span>
+        <span>Designed and built by Ari, age 7: <strong>God First, Money Wise</strong> helps families save together.</span>
         <a data-app href="https://app.damndadd.com/">Create your family account →</a>
       </div>
     </div>
@@ -460,7 +483,15 @@
           <span class="eyebrow">Our app · app.damndadd.com</span>
           <div class="section-head" style="margin-bottom:0">
             <h2>God First,<br>Money Wise.</h2>
-            <p>Savings for the whole family. We built it so parents and kids can build good money habits together, rooted in faith, one small step at a time.</p>
+            <p>Savings for the whole family, so parents and kids can build good money habits together, rooted in faith, one small step at a time.</p>
+          </div>
+          <div class="founder">
+            <div class="age" aria-hidden="true"><span>7<small>years old</small></span></div>
+            <div>
+              <span class="k">Meet the creator</span>
+              <h3>Designed and built by Ari.</h3>
+              <p>At just 7 years old, Ari designed and built God First, Money Wise to help families save together. Made by a kid, for the whole family.</p>
+            </div>
           </div>
           <ul class="features">
             <li>
@@ -577,7 +608,7 @@
             <span class="badge">Start here</span>
             <span class="k">God First, Money Wise</span>
             <h3>Save together, grow together.</h3>
-            <p>Create your family account in minutes and take the first small step today.</p>
+            <p>The family savings app Ari designed and built at age 7. Create your family account and take the first small step today.</p>
             <span class="btn btn-lg">Open the app →</span>
           </a>
           <a class="final-card fc-trivia rise" data-trivia data-path="#daily" href="https://blacktrivia.damndadd.com/#daily">
