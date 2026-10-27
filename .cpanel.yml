@@ -6,3 +6,5 @@ deployment:
     - /bin/cp -f index.html $DEPLOYPATH
     - /bin/cp -f robots.txt $DEPLOYPATH
     - /bin/cp -f sitemap.xml $DEPLOYPATH
+    - /bin/mkdir -p ${DEPLOYPATH}images
+    - /bin/cp -f images/ari.jpg ${DEPLOYPATH}images/

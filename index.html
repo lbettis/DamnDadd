@@ -164,16 +164,22 @@
 
     /* Ari spotlight */
     .founder {
-      display: grid; grid-template-columns: 76px 1fr; gap: 18px; align-items: center;
+      display: grid; grid-template-columns: 180px 1fr; gap: 26px; align-items: center;
       margin-top: 30px; padding: 20px 22px; border-radius: 20px;
       background: linear-gradient(135deg, #fff6e6, #fdeee6); border: 1px solid rgba(217, 164, 65, .45);
     }
-    .founder .age {
-      width: 76px; height: 76px; border-radius: 50%; background: var(--red); color: var(--gold-soft);
-      display: grid; place-items: center; text-align: center; line-height: 1;
-      font-family: var(--f-display); font-size: 40px; box-shadow: 0 0 0 6px rgba(179, 38, 30, .12);
+    .founder .ari { position: relative; }
+    .founder .ari img {
+      width: 180px; height: 225px; object-fit: cover; border-radius: 16px;
+      border: 4px solid var(--paper); box-shadow: 0 16px 30px -18px rgba(42, 29, 27, .6);
     }
-    .founder .age small { display: block; font-family: var(--f-body); font-size: 9px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-top: -2px; }
+    .founder .age {
+      position: absolute; right: -14px; bottom: -12px;
+      width: 62px; height: 62px; border-radius: 50%; background: var(--red); color: var(--gold-soft);
+      display: grid; place-items: center; text-align: center; line-height: 1;
+      font-family: var(--f-display); font-size: 32px; box-shadow: 0 0 0 4px var(--paper);
+    }
+    .founder .age small { display: block; font-family: var(--f-body); font-size: 8px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-top: -1px; }
     .founder .k { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
     .founder h3 { font-size: 26px; margin: 4px 0 6px; }
     .founder p { color: var(--ink-soft); font-size: 16px; }
@@ -391,6 +397,8 @@
       .nav .btn span.long { display: none; }
       .final-card { padding: 30px 26px; }
       .quiz { padding: 22px; }
+      .founder { grid-template-columns: 1fr; justify-items: start; padding: 22px; }
+      .founder .ari img { width: 100%; max-width: 260px; height: 300px; object-position: 50% 20%; }
       .quiz h3 { font-size: 23px; }
       .stats { gap: 24px; }
       .stats b { font-size: 36px; }
@@ -490,9 +498,12 @@
             <p>Savings for the whole family, so parents and kids can build good money habits together, rooted in faith, one small step at a time.</p>
           </div>
           <div class="founder">
-            <div class="age" aria-hidden="true"><span>7<small>years old</small></span></div>
+            <div class="ari">
+              <img src="images/ari.jpg" alt="Ari, the 7-year-old developer of God First, Money Wise" width="180" height="225" loading="lazy">
+              <div class="age" aria-hidden="true"><span>7<small>years old</small></span></div>
+            </div>
             <div>
-              <span class="k">Meet the creator</span>
+              <span class="k">Meet the developer</span>
               <h3>Designed and built by Ari.</h3>
               <p>At just 7 years old, Ari designed and built God First, Money Wise to help families save together. Made by a kid, for the whole family.</p>
             </div>
