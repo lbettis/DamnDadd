@@ -9,17 +9,16 @@ It's a single static page (`index.html`) with no build step.
 
 ## Deploying
 
-Every push to `main` uploads the site to the HostIgnition server through
-`.github/workflows/deploy.yml`. It can also be run by hand from the Actions tab.
+The site is hosted on HostIgnition and deployed with cPanel's Git Version Control,
+which keeps a clone of this repo. `.cpanel.yml` copies the site files into
+`public_html`. The first deploy saves the page that was there before as
+`index-before-damndadd-site.html`.
 
-Set these repository secrets once (Settings → Secrets and variables → Actions):
+After pushing to `main`:
 
-| Secret | Value |
-| --- | --- |
-| `FTP_SERVER` | FTP host from cPanel, e.g. `ftp.damndadd.com` |
-| `FTP_USERNAME` | cPanel FTP account username |
-| `FTP_PASSWORD` | That FTP account's password |
-| `FTP_SERVER_DIR` | Folder damndadd.com is served from, ending in `/`, e.g. `public_html/` |
+1. In cPanel, open **Git Version Control** and click **Manage** on **Damn Dadd**.
+2. On the **Pull or Deploy** tab, click **Update from Remote**.
+3. Click **Deploy HEAD Commit**.
 
 ## Updating videos
 
