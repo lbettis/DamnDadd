@@ -11,7 +11,7 @@ It's a single static page (`index.html`) with no build step.
 
 The site is hosted on HostIgnition and deployed with cPanel's Git Version Control,
 which keeps a clone of this repo. `.cpanel.yml` copies the site files into
-`public_html`. The first deploy saves the page that was there before as
+`/media/lbettis/damndadd.com`. The first deploy saves the page that was there before as
 `index-before-damndadd-site.html`.
 
 After pushing to `main`:

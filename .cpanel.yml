@@ -1,9 +1,10 @@
 ---
 deployment:
   tasks:
-    # damndadd.com is served from public_html. Only these files are copied, so
-    # anything else in public_html (subdomain folders, etc.) is left alone.
-    - export DEPLOYPATH=$HOME/public_html/
+    # damndadd.com is served from /media/lbettis/damndadd.com. Only these files are
+    # copied, so
+    # anything else in that folder is left alone.
+    - export DEPLOYPATH=/media/lbettis/damndadd.com/
     - mkdir -p $DEPLOYPATH
     # Keep a one-time copy of the page that was there before this site.
     - if [ -f ${DEPLOYPATH}index.html ] && [ ! -f ${DEPLOYPATH}index-before-damndadd-site.html ]; then cp ${DEPLOYPATH}index.html ${DEPLOYPATH}index-before-damndadd-site.html; fi
