@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Damn Dadd — The Bettis Family</title>
+  <meta name="description" content="Damn Dadd is the Bettis Family: faith, family and adventures on YouTube. Save as a family with God First, Money Wise, and test your Black cinema knowledge with Black Movies Trivia.">
+  <link rel="canonical" href="https://damndadd.com/">
+  <meta name="theme-color" content="#2a1d1b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Damn Dadd">
+  <meta property="og:title" content="Damn Dadd — The Bettis Family">
+  <meta property="og:description" content="Faith, family and a whole lot of adventures. Save together with God First, Money Wise and play Black Movies Trivia.">
+  <meta property="og:url" content="https://damndadd.com/">
+  <meta property="og:image" content="https://app.damndadd.com/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b3261e'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23f6c35b'%3EDD%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Damn Dadd",
+    "alternateName": "The Bettis Family",
+    "url": "https://damndadd.com/",
+    "logo": "https://app.damndadd.com/logo.png",
+    "sameAs": ["https://www.youtube.com/channel/UCwl6vyhCfb38VtslrUGMfEg"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --cream: #faf6f0;
+      --cream-2: #f3ebdf;
+      --paper: #ffffff;
+      --ink: #2a1d1b;
+      --ink-soft: #5c4a45;
+      --muted: #8a7670;
+      --red: #b3261e;
+      --red-deep: #8e1c16;
+      --gold: #d9a441;
+      --gold-soft: #f6c35b;
+      --line: rgba(42, 29, 27, 0.12);
+
+      /* Black Movies Trivia palette */
+      --night: #14111f;
+      --night-2: #1f1a31;
+      --night-3: #2a2342;
+      --night-ink: #f4efe6;
+      --night-muted: #b5adc7;
+      --trivia-gold: #e5b65a;
+      --trivia-gold-2: #f2cb7b;
+
+      --f-display: "DM Serif Display", Georgia, serif;
+      --f-body: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --radius: 16px;
+      --radius-lg: 26px;
+      --wrap: 1180px;
+      --gutter: 20px;
+      --shadow: 0 30px 60px -30px rgba(42, 29, 27, 0.35);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--f-body);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: var(--f-display); font-weight: 400; line-height: 1.05; margin: 0; letter-spacing: -0.01em; }
+    p { margin: 0; }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+    .eyebrow {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red);
+    }
+    .skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: #fff; padding: 8px 14px; border-radius: 8px; z-index: 100; }
+    .skip:focus { left: 8px; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 15px 24px; border-radius: 999px; font-weight: 700; font-size: 16px;
+      text-decoration: none; border: 2px solid transparent; cursor: pointer;
+      transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .btn-primary { background: var(--red); color: #fff; box-shadow: 0 14px 28px -12px rgba(179, 38, 30, .7); }
+    .btn-primary:hover { background: var(--red-deep); }
+    .btn-gold { background: var(--trivia-gold); color: #1b1407; box-shadow: 0 14px 28px -12px rgba(229, 182, 90, .6); }
+    .btn-gold:hover { background: var(--trivia-gold-2); }
+    .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--paper); }
+    .btn-ghost-dark { border-color: rgba(244, 239, 230, .2); color: var(--night-ink); }
+    .btn-yt { background: #ff0033; color: #fff; }
+    .btn-lg { padding: 18px 30px; font-size: 17px; }
+
+    /* Header */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(250, 246, 240, .86);
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-mark {
+      width: 38px; height: 38px; border-radius: 10px; background: var(--red); color: var(--gold-soft);
+      display: grid; place-items: center; font-family: var(--f-display); font-size: 19px;
+    }
+    .brand-name { font-family: var(--f-display); font-size: 24px; line-height: 1; }
+    .brand-name em { color: var(--red); font-style: italic; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { text-decoration: none; font-weight: 600; font-size: 15px; color: var(--ink-soft); }
+    .nav-links a:hover { color: var(--red); }
+    .nav .btn { padding: 11px 18px; font-size: 15px; }
+
+    /* Hero */
+    .hero { position: relative; padding: 72px 0 96px; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; inset: auto -10% -40% 40%; height: 120%;
+      background: radial-gradient(closest-side, rgba(217, 164, 65, .28), transparent 70%);
+      pointer-events: none;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; position: relative; }
+    .hero h1 { font-size: clamp(44px, 6.4vw, 84px); margin: 18px 0 22px; }
+    .hero h1 em { color: var(--red); }
+    .hero-lede { font-size: 20px; color: var(--ink-soft); max-width: 34ch; margin-bottom: 34px; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+    .hero-note { margin-top: 22px; font-size: 14px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+    .hero-note .dot { width: 8px; height: 8px; border-radius: 50%; background: #2f9e5b; box-shadow: 0 0 0 4px rgba(47, 158, 91, .18); }
+
+    .hero-stack { position: relative; min-height: 470px; }
+    .app-card {
+      position: absolute; right: 0; top: 0; width: min(100%, 360px);
+      background: var(--paper); border-radius: var(--radius-lg); padding: 30px 28px 26px;
+      box-shadow: var(--shadow); border: 1px solid var(--line); text-align: center;
+      text-decoration: none; color: inherit; transition: transform .2s ease;
+    }
+    .app-card:hover { transform: translateY(-4px) rotate(-.5deg); }
+    .app-card img { width: 170px; margin: 0 auto 6px; }
+    .app-card .sub { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+    .fake-input { height: 42px; border-radius: 10px; background: var(--cream-2); margin-bottom: 10px; }
+    .fake-btn { height: 44px; border-radius: 12px; background: #9b4552; color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 15px; margin-top: 6px; }
+    .app-card .tag { margin-top: 16px; font-size: 13px; color: var(--ink-soft); font-style: italic; font-family: var(--f-display); }
+
+    .trivia-chip {
+      position: absolute; left: 0; bottom: 0; width: min(88%, 320px);
+      background: var(--night); color: var(--night-ink); border-radius: var(--radius-lg); padding: 22px 24px;
+      box-shadow: 0 30px 60px -24px rgba(20, 17, 31, .6); text-decoration: none; transform: rotate(-3deg);
+      transition: transform .2s ease; border: 1px solid rgba(229, 182, 90, .25);
+    }
+    .trivia-chip:hover { transform: rotate(-1deg) translateY(-4px); }
+    .trivia-chip .k { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--trivia-gold); font-weight: 700; }
+    .trivia-chip h3 { font-size: 26px; margin: 8px 0 6px; }
+    .trivia-chip h3 em { color: var(--trivia-gold); }
+    .trivia-chip p { font-size: 14px; color: var(--night-muted); }
+    .trivia-chip .go { margin-top: 14px; display: inline-flex; gap: 8px; align-items: center; font-weight: 700; color: var(--trivia-gold-2); font-size: 14px; }
+
+    /* Priority strip */
+    .strip { background: var(--ink); color: var(--cream); }
+    .strip-inner { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 14px 0; flex-wrap: wrap; text-align: center; font-size: 15px; }
+    .strip a { color: var(--gold-soft); font-weight: 700; text-decoration: none; }
+    .strip a:hover { text-decoration: underline; }
+
+    /* Sections */
+    section { padding: 110px 0; }
+    .section-head { max-width: 680px; margin-bottom: 52px; }
+    .section-head h2 { font-size: clamp(36px, 4.6vw, 58px); margin: 14px 0 18px; }
+    .section-head p { font-size: 19px; color: var(--ink-soft); }
+
+    /* Money Wise */
+    .money { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .money-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 64px; align-items: center; }
+    .money-visual {
+      background: linear-gradient(160deg, #fff6e6, var(--cream-2)); border-radius: 32px; padding: 48px 36px;
+      display: grid; place-items: center; position: relative; overflow: hidden; min-height: 460px;
+    }
+    .money-visual img { width: min(300px, 80%); position: relative; }
+    .money-visual .ring { position: absolute; border-radius: 50%; border: 2px dashed rgba(179, 38, 30, .18); }
+    .money-visual .r1 { width: 380px; height: 380px; }
+    .money-visual .r2 { width: 520px; height: 520px; border-color: rgba(217, 164, 65, .25); }
+    .money-visual .quote {
+      position: absolute; bottom: 24px; left: 24px; right: 24px; text-align: center;
+      font-family: var(--f-display); font-style: italic; font-size: 20px; color: var(--ink-soft);
+    }
+    .features { display: grid; gap: 22px; margin: 34px 0 40px; padding: 0; list-style: none; }
+    .features li { display: grid; grid-template-columns: 48px 1fr; gap: 16px; align-items: start; }
+    .features .ic {
+      width: 48px; height: 48px; border-radius: 14px; background: rgba(179, 38, 30, .08); color: var(--red);
+      display: grid; place-items: center;
+    }
+    .features .ic svg { width: 24px; height: 24px; }
+    .features h3 { font-family: var(--f-body); font-size: 18px; font-weight: 700; margin-bottom: 2px; line-height: 1.3; }
+    .features p { color: var(--ink-soft); font-size: 16px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+    .cta-row small { color: var(--muted); font-size: 14px; }
+
+    /* Trivia */
+    .trivia { background: var(--night); color: var(--night-ink); position: relative; overflow: hidden; }
+    .trivia::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 10px;
+      background: repeating-linear-gradient(90deg, var(--trivia-gold) 0 14px, transparent 14px 22px);
+      opacity: .55;
+    }
+    .trivia::after {
+      content: ""; position: absolute; width: 700px; height: 700px; right: -220px; top: -200px;
+      background: radial-gradient(closest-side, rgba(229, 182, 90, .16), transparent);
+      pointer-events: none;
+    }
+    .trivia .eyebrow { color: var(--trivia-gold); }
+    .trivia .section-head p { color: var(--night-muted); }
+    .trivia h2 em { color: var(--trivia-gold); }
+    .trivia-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; position: relative; z-index: 1; }
+    .stats { display: flex; gap: 36px; margin: 8px 0 36px; flex-wrap: wrap; }
+    .stats b { display: block; font-family: var(--f-display); font-weight: 400; font-size: 44px; color: var(--trivia-gold-2); line-height: 1; }
+    .stats span { font-size: 13px; color: var(--night-muted); text-transform: uppercase; letter-spacing: .12em; }
+    .trivia-points { list-style: none; padding: 0; margin: 0 0 36px; display: grid; gap: 12px; }
+    .trivia-points li { display: flex; gap: 12px; color: var(--night-muted); }
+    .trivia-points li::before { content: "★"; color: var(--trivia-gold); flex: none; }
+
+    .quiz {
+      background: var(--night-2); border: 1px solid rgba(229, 182, 90, .2); border-radius: var(--radius-lg);
+      padding: 30px; box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .8);
+    }
+    .quiz-top { display: flex; justify-content: space-between; align-items: center; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--trivia-gold); font-weight: 700; margin-bottom: 18px; }
+    .timer { height: 6px; background: var(--night-3); border-radius: 999px; overflow: hidden; margin-bottom: 22px; }
+    .timer i { display: block; height: 100%; width: 100%; background: var(--trivia-gold); border-radius: inherit; transform-origin: left; }
+    .quiz.running .timer i { animation: drain 20s linear forwards; }
+    @keyframes drain { to { transform: scaleX(0); } }
+    .quiz h3 { font-size: 27px; margin-bottom: 22px; line-height: 1.2; }
+    .opts { display: grid; gap: 10px; }
+    .opt {
+      text-align: left; font: inherit; font-weight: 600; color: var(--night-ink); background: var(--night-3);
+      border: 1px solid transparent; border-radius: 12px; padding: 14px 16px; cursor: pointer;
+      display: flex; gap: 12px; align-items: center; transition: border-color .15s, background .15s;
+    }
+    .opt:hover:not(:disabled) { border-color: rgba(229, 182, 90, .5); }
+    .opt .l { width: 28px; height: 28px; border-radius: 8px; background: rgba(244, 239, 230, .08); display: grid; place-items: center; font-size: 13px; flex: none; }
+    .opt.right { background: rgba(79, 194, 133, .16); border-color: #4fc285; }
+    .opt.wrong { background: rgba(239, 107, 87, .14); border-color: #ef6b57; }
+    .opt:disabled { cursor: default; }
+    .reveal { display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(244, 239, 230, .1); }
+    .quiz.done .reveal { display: block; }
+    .reveal .verdict { font-family: var(--f-display); font-size: 24px; margin-bottom: 6px; }
+    .reveal p { color: var(--night-muted); font-size: 15px; margin-bottom: 18px; }
+
+    /* Videos */
+    .videos-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+    .videos-head .section-head { margin-bottom: 0; }
+    .player {
+      position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius-lg); overflow: hidden;
+      background: #000; box-shadow: var(--shadow); margin-bottom: 18px;
+    }
+    .player iframe, .player .poster { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .poster { cursor: pointer; background: #000 center / cover no-repeat; display: block; padding: 0; }
+    .poster::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 45%, rgba(0, 0, 0, .75)); }
+    .play {
+      position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2;
+      width: 86px; height: 86px; border-radius: 50%; background: var(--red); display: grid; place-items: center;
+      box-shadow: 0 0 0 10px rgba(179, 38, 30, .25); transition: transform .2s ease;
+    }
+    .poster:hover .play { transform: translate(-50%, -50%) scale(1.08); }
+    .play svg { width: 34px; height: 34px; margin-left: 5px; fill: #fff; }
+    .poster-cap { position: absolute; left: 28px; right: 28px; bottom: 24px; z-index: 2; color: #fff; text-align: left; }
+    .poster-cap small { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--gold-soft); }
+    .poster-cap strong { display: block; font-family: var(--f-display); font-weight: 400; font-size: clamp(22px, 3vw, 34px); line-height: 1.15; margin-top: 4px; }
+
+    .vid-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-top: 30px; }
+    .vid {
+      background: none; border: 0; padding: 0; text-align: left; font: inherit; color: inherit; cursor: pointer;
+    }
+    .vid .th { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: var(--cream-2); }
+    .vid .th img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+    .vid:hover .th img { transform: scale(1.06); }
+    .vid .len { position: absolute; right: 6px; bottom: 6px; background: rgba(0, 0, 0, .78); color: #fff; font-size: 12px; font-weight: 600; padding: 2px 6px; border-radius: 6px; }
+    .vid.active .th { outline: 3px solid var(--red); outline-offset: 2px; }
+    .vid h3 { font-family: var(--f-body); font-weight: 600; font-size: 14.5px; line-height: 1.35; margin-top: 10px; }
+    .vid span.meta { font-size: 13px; color: var(--muted); }
+
+    /* Family */
+    .family { background: var(--cream-2); }
+    .family-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .family blockquote {
+      margin: 0; font-family: var(--f-display); font-size: clamp(30px, 3.6vw, 46px); line-height: 1.15;
+    }
+    .family blockquote em { color: var(--red); }
+    .family-copy p { color: var(--ink-soft); font-size: 18px; margin-bottom: 18px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .tags span { background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; font-size: 14px; font-weight: 600; color: var(--ink-soft); }
+
+    /* Final CTA */
+    .final { padding: 110px 0 120px; }
+    .final h2 { font-size: clamp(36px, 4.6vw, 58px); text-align: center; margin-bottom: 46px; }
+    .final-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 22px; }
+    .final-card {
+      border-radius: 28px; padding: 40px; text-decoration: none; display: flex; flex-direction: column; gap: 14px;
+      min-height: 300px; transition: transform .2s ease, box-shadow .2s ease; position: relative; overflow: hidden;
+    }
+    .final-card:hover { transform: translateY(-6px); }
+    .final-card .k { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; }
+    .final-card h3 { font-size: clamp(32px, 3.4vw, 44px); }
+    .final-card p { font-size: 17px; max-width: 36ch; }
+    .final-card .btn { margin-top: auto; align-self: flex-start; }
+    .fc-app { background: var(--red); color: #fff; box-shadow: 0 40px 70px -36px rgba(179, 38, 30, .8); }
+    .fc-app .k { color: var(--gold-soft); }
+    .fc-app p { color: rgba(255, 255, 255, .85); }
+    .fc-app .btn { background: #fff; color: var(--red); }
+    .fc-app .badge { position: absolute; top: 28px; right: 28px; background: var(--gold-soft); color: var(--ink); font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 999px; letter-spacing: .04em; }
+    .fc-trivia { background: var(--night); color: var(--night-ink); }
+    .fc-trivia .k { color: var(--trivia-gold); }
+    .fc-trivia h3 em { color: var(--trivia-gold); }
+    .fc-trivia p { color: var(--night-muted); }
+
+    /* Footer */
+    footer { background: var(--ink); color: rgba(250, 246, 240, .75); padding: 56px 0 120px; font-size: 15px; }
+    .foot { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .foot .brand-name { color: var(--cream); }
+    .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .foot a { text-decoration: none; }
+    .foot a:hover { color: var(--gold-soft); }
+    .foot h4 { color: var(--cream); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 12px; }
+    .foot-cols { display: flex; gap: 64px; flex-wrap: wrap; }
+    .copy { margin-top: 40px; padding-top: 22px; border-top: 1px solid rgba(250, 246, 240, .12); font-size: 13px; }
+
+    /* Mobile sticky CTA */
+    .mobile-cta {
+      position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60; display: none; gap: 8px;
+      padding: 8px; background: rgba(42, 29, 27, .94); border-radius: 20px; backdrop-filter: blur(10px);
+      box-shadow: 0 18px 40px -12px rgba(0, 0, 0, .5);
+      transform: translateY(140%); transition: transform .3s ease;
+    }
+    .mobile-cta.show { transform: none; }
+    .mobile-cta a { flex: 1; padding: 13px 10px; font-size: 14.5px; }
+
+    /* Reveal on scroll */
+    .rise { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .rise.in { opacity: 1; transform: none; }
+
+    @media (max-width: 1020px) {
+      .vid-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero { padding: 48px 0 72px; }
+      .hero-grid, .money-grid, .trivia-grid, .family-grid, .final-grid { grid-template-columns: 1fr; gap: 44px; }
+      .hero-stack { min-height: 440px; max-width: 420px; margin: 0 auto; width: 100%; }
+      .money-visual { min-height: 360px; order: -1; }
+      section { padding: 80px 0; }
+      .mobile-cta { display: flex; }
+    }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .vid-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .hero-ctas .btn { width: 100%; }
+      .hero-lede { font-size: 18px; }
+      .nav .btn span.long { display: none; }
+      .final-card { padding: 30px 26px; }
+      .quiz { padding: 22px; }
+      .quiz h3 { font-size: 23px; }
+      .stats { gap: 24px; }
+      .stats b { font-size: 36px; }
+      .poster-cap { left: 18px; right: 18px; bottom: 16px; }
+      .play { width: 68px; height: 68px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      .rise { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Main">
+      <a class="brand" href="#top" aria-label="Damn Dadd home">
+        <span class="brand-mark" aria-hidden="true">DD</span>
+        <span class="brand-name">Damn <em>Dadd</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#money-wise">Money Wise</a></li>
+        <li><a href="#trivia">Black Movies Trivia</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#family">The Family</a></li>
+      </ul>
+      <a class="btn btn-primary" data-app href="https://app.damndadd.com/">Open the app<span class="long"> →</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">The Bettis Family · Est. on YouTube</span>
+          <h1>Faith. Family.<br><em>Money wise.</em></h1>
+          <p class="hero-lede">We're the Bettis Family. We make videos, build tools for families like ours, and celebrate the culture along the way.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" data-app href="https://app.damndadd.com/">
+              Start saving as a family
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg" data-trivia href="https://blacktrivia.damndadd.com/">Play Black Movies Trivia</a>
+          </div>
+          <p class="hero-note"><span class="dot" aria-hidden="true"></span> Both are free to try today</p>
+        </div>
+
+        <div class="hero-stack" aria-label="Our apps">
+          <a class="app-card" data-app href="https://app.damndadd.com/" aria-label="Open God First, Money Wise">
+            <img src="https://app.damndadd.com/logo.png" alt="God First, Money Wise logo" width="170" height="170">
+            <p class="sub">Savings for the whole family</p>
+            <div class="fake-input"></div>
+            <div class="fake-input"></div>
+            <div class="fake-btn">Start your family</div>
+            <p class="tag">Small steps today. Strong roots tomorrow.</p>
+          </a>
+          <a class="trivia-chip" data-trivia data-path="#daily" href="https://blacktrivia.damndadd.com/#daily" aria-label="Play today's Black Movies Trivia challenge">
+            <span class="k">Daily Challenge · Free</span>
+            <h3>Black Movies <em>Trivia</em></h3>
+            <p>Five questions. One attempt. How well do you know Black cinema?</p>
+            <span class="go">Take today's challenge →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="wrap strip-inner">
+        <span>New: build your family's savings habit with <strong>God First, Money Wise</strong>.</span>
+        <a data-app href="https://app.damndadd.com/">Create your family account →</a>
+      </div>
+    </div>
+
+    <!-- MONEY WISE (top priority) -->
+    <section class="money" id="money-wise">
+      <div class="wrap money-grid">
+        <div class="money-visual rise">
+          <span class="ring r2" aria-hidden="true"></span>
+          <span class="ring r1" aria-hidden="true"></span>
+          <img src="https://app.damndadd.com/logo.png" alt="God First, Money Wise" width="300" height="300" loading="lazy">
+          <p class="quote">"Small steps today. Strong roots tomorrow."</p>
+        </div>
+        <div class="rise">
+          <span class="eyebrow">Our app · app.damndadd.com</span>
+          <div class="section-head" style="margin-bottom:0">
+            <h2>God First,<br>Money Wise.</h2>
+            <p>Savings for the whole family. We built it so parents and kids can build good money habits together, rooted in faith, one small step at a time.</p>
+          </div>
+          <ul class="features">
+            <li>
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+              <div><h3>One account for the whole family</h3><p>Start a new family and bring everyone into the same place.</p></div>
+            </li>
+            <li>
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+              <div><h3>Kid-friendly sign in</h3><p>Sign in with an email or username and a password or simple PIN.</p></div>
+            </li>
+            <li>
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V12M12 12C12 7 8 4 4 4c0 4 3 8 8 8ZM12 12c0-5 4-8 8-8 0 4-3 8-8 8Z"/></svg></span>
+              <div><h3>Habits that grow</h3><p>Small, steady steps toward saving, so the lessons stick for life.</p></div>
+            </li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-lg" data-app href="https://app.damndadd.com/">Start your family — it's free</a>
+            <a class="btn btn-ghost" data-app href="https://app.damndadd.com/">I already have an account</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLACK MOVIES TRIVIA -->
+    <section class="trivia" id="trivia">
+      <div class="wrap trivia-grid">
+        <div class="rise">
+          <span class="eyebrow">Our game · blacktrivia.damndadd.com</span>
+          <div class="section-head" style="margin-bottom:28px">
+            <h2>How well do you know <em>Black cinema?</em></h2>
+            <p>From Oscar Micheaux's silent features to Ryan Coogler's blockbusters. Test yourself on the films, filmmakers and performances that shaped the screen.</p>
+          </div>
+          <div class="stats">
+            <div><b>5</b><span>Daily questions</span></div>
+            <div><b>20s</b><span>Per question</span></div>
+            <div><b>100+</b><span>Years of film</span></div>
+          </div>
+          <ul class="trivia-points">
+            <li>A new Daily Challenge every midnight. Share your score.</li>
+            <li>Bonus points for speed and streaks.</li>
+            <li>Every answer reveals a fact about the film and its history.</li>
+            <li>Free to play. No account needed.</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-gold btn-lg" data-trivia data-path="#daily" href="https://blacktrivia.damndadd.com/#daily">Take today's challenge</a>
+            <a class="btn btn-ghost-dark btn" data-trivia data-path="#play" href="https://blacktrivia.damndadd.com/#play">Play a mixed round</a>
+          </div>
+        </div>
+
+        <div class="quiz rise" id="quiz" aria-live="polite">
+          <div class="quiz-top"><span>Try one now</span><span id="quiz-clock">20s</span></div>
+          <div class="timer" aria-hidden="true"><i></i></div>
+          <h3>Who was the first Black actor to win the Academy Award for Best Actor?</h3>
+          <div class="opts">
+            <button class="opt" data-ok="0"><span class="l">A</span>Denzel Washington</button>
+            <button class="opt" data-ok="1"><span class="l">B</span>Sidney Poitier</button>
+            <button class="opt" data-ok="0"><span class="l">C</span>James Earl Jones</button>
+            <button class="opt" data-ok="0"><span class="l">D</span>Harry Belafonte</button>
+          </div>
+          <div class="reveal">
+            <p class="verdict" id="verdict"></p>
+            <p>Sidney Poitier won Best Actor for <em>Lilies of the Field</em> (1963) at the 1964 Oscars, a first that opened the door for generations after him.</p>
+            <a class="btn btn-gold" data-trivia data-path="#daily" href="https://blacktrivia.damndadd.com/#daily">Keep playing — today's challenge →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="videos">
+      <div class="wrap">
+        <div class="videos-head">
+          <div class="section-head">
+            <span class="eyebrow">On YouTube</span>
+            <h2>Watch the Damn Dadd channel</h2>
+            <p>Road trips, family adventures, drones, snow days and whatever we're up to next.</p>
+          </div>
+          <a class="btn btn-yt" href="https://www.youtube.com/channel/UCwl6vyhCfb38VtslrUGMfEg?sub_confirmation=1" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+            Subscribe
+          </a>
+        </div>
+
+        <div class="player rise" id="player">
+          <button class="poster" id="poster" aria-label="Play video">
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>
+            <span class="poster-cap"><small id="poster-kicker">Latest upload</small><strong id="poster-title"></strong></span>
+          </button>
+        </div>
+
+        <div class="vid-grid" id="vid-grid"></div>
+      </div>
+    </section>
+
+    <!-- FAMILY -->
+    <section class="family" id="family">
+      <div class="wrap family-grid">
+        <blockquote class="rise">"Not another hobby!" — <em>every member of the Bettis Family</em>, at some point.</blockquote>
+        <div class="family-copy rise">
+          <span class="eyebrow">Who we are</span>
+          <p style="margin-top:14px">Damn Dadd is the Bettis Family. What started as a dad with a camera became a home for our adventures: riding the Lake Superior Circle Tour on a Harley, flying drones through the morning fog, snow tubing on New Year's Day and visiting The Gambia.</p>
+          <p>Now we're building things for families like ours. <a data-app href="https://app.damndadd.com/"><strong>God First, Money Wise</strong></a> helps families save together, and <a data-trivia href="https://blacktrivia.damndadd.com/"><strong>Black Movies Trivia</strong></a> celebrates more than a century of Black film.</p>
+          <div class="tags"><span>Faith</span><span>Family</span><span>Road trips</span><span>Drones</span><span>Black cinema</span><span>Money habits</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <div class="wrap">
+        <h2 class="rise">Pick your next move.</h2>
+        <div class="final-grid">
+          <a class="final-card fc-app rise" data-app href="https://app.damndadd.com/">
+            <span class="badge">Start here</span>
+            <span class="k">God First, Money Wise</span>
+            <h3>Save together, grow together.</h3>
+            <p>Create your family account in minutes and take the first small step today.</p>
+            <span class="btn btn-lg">Open the app →</span>
+          </a>
+          <a class="final-card fc-trivia rise" data-trivia data-path="#daily" href="https://blacktrivia.damndadd.com/#daily">
+            <span class="k">Black Movies Trivia</span>
+            <h3>Today's <em>challenge</em> is live.</h3>
+            <p>Five questions on Black cinema. One attempt. Can you beat your family's score?</p>
+            <span class="btn btn-gold btn-lg">Play free →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">DD</span><span class="brand-name">Damn <em style="color:var(--gold-soft)">Dadd</em></span></a>
+          <p style="margin-top:14px;max-width:32ch">The Bettis Family. Faith, family and a whole lot of adventures.</p>
+        </div>
+        <div class="foot-cols">
+          <div>
+            <h4>Our apps</h4>
+            <ul>
+              <li><a data-app href="https://app.damndadd.com/">God First, Money Wise</a></li>
+              <li><a data-trivia href="https://blacktrivia.damndadd.com/">Black Movies Trivia</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Watch</h4>
+            <ul>
+              <li><a href="https://www.youtube.com/channel/UCwl6vyhCfb38VtslrUGMfEg" target="_blank" rel="noopener">YouTube channel</a></li>
+              <li><a href="https://www.youtube.com/channel/UCwl6vyhCfb38VtslrUGMfEg?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="copy">© <span id="yr">2026</span> Damn Dadd · The Bettis Family</p>
+    </div>
+  </footer>
+
+  <div class="mobile-cta" id="mobile-cta">
+    <a class="btn btn-primary" data-app href="https://app.damndadd.com/">Open the app</a>
+    <a class="btn btn-gold" data-trivia data-path="#daily" href="https://blacktrivia.damndadd.com/#daily">Play trivia</a>
+  </div>
+
+  <script>
+    (function () {
+      // Channel uploads. The featured player embeds the uploads playlist, so new videos appear automatically.
+      var CHANNEL = "UCwl6vyhCfb38VtslrUGMfEg";
+      var UPLOADS = "UU" + CHANNEL.slice(2);
+      var VIDEOS = [
+        { id: "WB0kDcpf7u4", title: "MJ Homes Africa Rental (The Gambia)", len: "2:35" },
+        { id: "7FqpfDGZIsc", title: "Lake Superior Circle Tour (Harley Davidson)", len: "12:27" },
+        { id: "CCHWttrx5js", title: "Drone Flies Through Morning Fog", len: "0:38" },
+        { id: "A8W8SF2XDsg", title: "January 1, 2021 Snow Tubing", len: "3:43" },
+        { id: "RmPa3D1U9hk", title: "I Broke My RC Rod After a Jump", len: "0:51" },
+        { id: "9ug9w2ZGUsg", title: "Backstage with Bronco Players: Fans Thought I Was a Player!", len: "12:50" },
+        { id: "MaB0KAgmGes", title: "Not Another Hobby! Damn Dadd Out Here Droning!", len: "1:36" },
+        { id: "GGM7mhh-Fc8", title: "What Were We Thinking? Hanging Out Downtown Madison!", len: "1:21" },
+        { id: "3_giE9ucZAE", title: "Why We Are Not Staying Home", len: "1:00" },
+        { id: "Cj6RyXHYQ84", title: "Quarantine Lifestyle in the First Days of Spring", len: "0:59" }
+      ];
+
+      // Tag outbound links to our apps so their analytics can credit damndadd.com.
+      function tag(url, campaign) {
+        var u = new URL(url);
+        u.searchParams.set("utm_source", "damndadd.com");
+        u.searchParams.set("utm_medium", "referral");
+        u.searchParams.set("utm_campaign", campaign);
+        return u.toString();
+      }
+      document.querySelectorAll("[data-app]").forEach(function (a) {
+        a.href = tag("https://app.damndadd.com/", "money_wise");
+      });
+      document.querySelectorAll("[data-trivia]").forEach(function (a) {
+        a.href = tag("https://blacktrivia.damndadd.com/", "black_trivia") + (a.dataset.path || "");
+      });
+
+      // Video player: a lightweight poster that only loads YouTube when clicked.
+      var player = document.getElementById("player");
+      var poster = document.getElementById("poster");
+      var grid = document.getElementById("vid-grid");
+      var current = null;
+
+      function thumb(id, q) { return "https://i.ytimg.com/vi/" + id + "/" + (q || "hqdefault") + ".jpg"; }
+
+      function showPoster(v, kicker) {
+        poster.style.backgroundImage = "url(" + thumb(v.id, "maxresdefault") + "), url(" + thumb(v.id) + ")";
+        document.getElementById("poster-title").textContent = v.title;
+        document.getElementById("poster-kicker").textContent = kicker;
+      }
+
+      function embed(src) {
+        var f = document.createElement("iframe");
+        f.src = src;
+        f.title = "Damn Dadd video";
+        f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        f.allowFullscreen = true;
+        player.innerHTML = "";
+        player.appendChild(f);
+      }
+
+      poster.addEventListener("click", function () {
+        embed(current
+          ? "https://www.youtube-nocookie.com/embed/" + current + "?autoplay=1&rel=0"
+          : "https://www.youtube-nocookie.com/embed/videoseries?list=" + UPLOADS + "&autoplay=1&rel=0");
+      });
+
+      VIDEOS.forEach(function (v) {
+        var b = document.createElement("button");
+        b.className = "vid";
+        b.innerHTML =
+          '<div class="th"><img loading="lazy" alt="" src="' + thumb(v.id, "mqdefault") + '"><span class="len">' + v.len + "</span></div>" +
+          '<h3 class="vid-title"></h3>';
+        b.querySelector("h3").textContent = v.title;
+        b.setAttribute("aria-label", "Play " + v.title);
+        b.addEventListener("click", function () {
+          current = v.id;
+          grid.querySelectorAll(".vid").forEach(function (x) { x.classList.remove("active"); });
+          b.classList.add("active");
+          embed("https://www.youtube-nocookie.com/embed/" + v.id + "?autoplay=1&rel=0");
+          player.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+        grid.appendChild(b);
+      });
+      showPoster(VIDEOS[0], "Latest upload · plays the whole channel");
+
+      // Trivia teaser
+      var quiz = document.getElementById("quiz");
+      var clock = document.getElementById("quiz-clock");
+      var timer, left = 20, started = false;
+      function finish(picked) {
+        clearInterval(timer);
+        quiz.classList.remove("running");
+        quiz.classList.add("done");
+        quiz.querySelectorAll(".opt").forEach(function (o) {
+          o.disabled = true;
+          if (o.dataset.ok === "1") o.classList.add("right");
+        });
+        if (picked && picked.dataset.ok !== "1") picked.classList.add("wrong");
+        document.getElementById("verdict").textContent =
+          !picked ? "Time's up!" : picked.dataset.ok === "1" ? "Correct! +100" : "Not quite.";
+      }
+      function start() {
+        if (started) return;
+        started = true;
+        quiz.classList.add("running");
+        timer = setInterval(function () {
+          left -= 1;
+          clock.textContent = left + "s";
+          if (left <= 0) finish(null);
+        }, 1000);
+      }
+      quiz.querySelectorAll(".opt").forEach(function (o) {
+        o.addEventListener("click", function () { start(); finish(o); });
+      });
+
+      // Start the clock and fade sections in once they scroll into view.
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            e.target.classList.add("in");
+            if (e.target === quiz) start();
+            io.unobserve(e.target);
+          });
+        }, { threshold: 0.25 });
+        document.querySelectorAll(".rise").forEach(function (el) { io.observe(el); });
+      } else {
+        document.querySelectorAll(".rise").forEach(function (el) { el.classList.add("in"); });
+      }
+
+      // Mobile CTA bar appears after the hero.
+      var bar = document.getElementById("mobile-cta");
+      var hero = document.querySelector(".hero");
+      window.addEventListener("scroll", function () {
+        bar.classList.toggle("show", window.scrollY > hero.offsetHeight - 80);
+      }, { passive: true });
+
+      document.getElementById("yr").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
