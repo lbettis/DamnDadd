@@ -86,6 +86,7 @@
     .eyebrow {
       font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red);
     }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
     .skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: #fff; padding: 8px 14px; border-radius: 8px; z-index: 100; }
     .skip:focus { left: 8px; }
     :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
@@ -433,7 +434,7 @@
         <li><a href="#videos">Videos</a></li>
         <li><a href="#family">The Family</a></li>
       </ul>
-      <a class="btn btn-primary" data-app href="https://app.damndadd.com/">Open the app<span class="long"> →</span></a>
+      <a class="btn btn-primary" data-app href="https://app.damndadd.com/"><span>Open <span class="long">Money Wise </span>app ↗</span></a>
     </nav>
   </header>
 
@@ -448,11 +449,11 @@
           <div class="hero-ctas">
             <a class="btn btn-primary btn-lg" data-app href="https://app.damndadd.com/">
               Start saving as a family
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
             </a>
             <a class="btn btn-ghost btn-lg" data-trivia href="https://blacktrivia.damndadd.com/">Play Black Movies Trivia</a>
           </div>
-          <p class="hero-note"><span class="dot" aria-hidden="true"></span> Both are free to try today</p>
+          <p class="hero-note"><span class="dot" aria-hidden="true"></span> Each opens in its own app, free to try today</p>
         </div>
 
         <div class="hero-stack" aria-label="Our apps">
@@ -469,7 +470,7 @@
             <span class="k">Daily Challenge · Free</span>
             <h3>Black Movies <em>Trivia</em></h3>
             <p>Five questions. One attempt. How well do you know Black cinema?</p>
-            <span class="go">Take today's challenge →</span>
+            <span class="go">Take today's challenge ↗</span>
           </a>
         </div>
       </div>
@@ -478,7 +479,7 @@
     <div class="strip">
       <div class="wrap strip-inner">
         <span>Designed and built by Ari, age 7: <strong>God First, Money Wise</strong> helps families save together.</span>
-        <a data-app href="https://app.damndadd.com/">Create your family account →</a>
+        <a data-app href="https://app.damndadd.com/">Create your family account ↗</a>
       </div>
     </div>
 
@@ -569,7 +570,7 @@
           <div class="reveal">
             <p class="verdict" id="verdict"></p>
             <p>Sidney Poitier won Best Actor for <em>Lilies of the Field</em> (1963) at the 1964 Oscars, a first that opened the door for generations after him.</p>
-            <a class="btn btn-gold" data-trivia data-path="#daily" href="https://blacktrivia.damndadd.com/#daily">Keep playing — today's challenge →</a>
+            <a class="btn btn-gold" data-trivia data-path="#daily" href="https://blacktrivia.damndadd.com/#daily">Keep playing — today's challenge ↗</a>
           </div>
         </div>
       </div>
@@ -624,13 +625,13 @@
             <span class="k">God First, Money Wise</span>
             <h3>Save together, grow together.</h3>
             <p>The family savings app Ari designed and built at age 7. Create your family account and take the first small step today.</p>
-            <span class="btn btn-lg">Open the app →</span>
+            <span class="btn btn-lg">Open Money Wise ↗</span>
           </a>
           <a class="final-card fc-trivia rise" data-trivia data-path="#daily" href="https://blacktrivia.damndadd.com/#daily">
             <span class="k">Black Movies Trivia</span>
             <h3>Today's <em>challenge</em> is live.</h3>
             <p>Five questions on Black cinema. One attempt. Can you beat your family's score?</p>
-            <span class="btn btn-gold btn-lg">Play free →</span>
+            <span class="btn btn-gold btn-lg">Play free ↗</span>
           </a>
         </div>
       </div>
@@ -666,8 +667,8 @@
   </footer>
 
   <div class="mobile-cta" id="mobile-cta">
-    <a class="btn btn-primary" data-app href="https://app.damndadd.com/">Open the app</a>
-    <a class="btn btn-gold" data-trivia data-path="#daily" href="https://blacktrivia.damndadd.com/#daily">Play trivia</a>
+    <a class="btn btn-primary" data-app href="https://app.damndadd.com/">Open app ↗</a>
+    <a class="btn btn-gold" data-trivia data-path="#daily" href="https://blacktrivia.damndadd.com/#daily">Play trivia ↗</a>
   </div>
 
   <script>
@@ -701,6 +702,16 @@
       });
       document.querySelectorAll("[data-trivia]").forEach(function (a) {
         a.href = tag("https://blacktrivia.damndadd.com/", "black_trivia") + (a.dataset.path || "");
+      });
+
+      // Our apps are separate sites, so open them in their own tab.
+      document.querySelectorAll("[data-app], [data-trivia]").forEach(function (a) {
+        a.target = "_blank";
+        a.rel = "noopener";
+        var note = document.createElement("span");
+        note.className = "sr-only";
+        note.textContent = " (opens in a new tab)";
+        a.appendChild(note);
       });
 
       // Video player: a lightweight poster that only loads YouTube when clicked.
